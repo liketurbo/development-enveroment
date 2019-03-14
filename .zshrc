@@ -67,3 +67,6 @@ export DOCKER_HOST="tcp://192.168.99.100:2376"
 export DOCKER_CERT_PATH=$(wslpath "C:\Users\Ramzan\.docker\machine\machines\default")
 export DOCKER_MACHINE_NAME="default"
 export COMPOSE_CONVERT_WINDOWS_PATHS="true"
+
+# My aliases
+alias cat="pygmentize -g"
