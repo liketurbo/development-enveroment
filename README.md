@@ -1,2 +1,2 @@
 ## Development evnveroment
-My [tmux](https://github.com/tmux/tmux) and [zsh](https://github.com/robbyrussell/oh-my-zsh) configuration.
+My [tmux](https://github.com/tmux/tmux), [zsh](https://github.com/robbyrussell/oh-my-zsh), [git](https://git-scm.com) configuration.
