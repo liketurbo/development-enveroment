@@ -1,5 +1,6 @@
 [alias]
 	cm = commit
+	co = checkout
 [user]
 	email = theliketurbo@gmail.com
 	name = Ramzan Chasygov

@@ -68,5 +68,12 @@ export DOCKER_CERT_PATH=$(wslpath "C:\Users\Ramzan\.docker\machine\machines\defa
 export DOCKER_MACHINE_NAME="default"
 export COMPOSE_CONVERT_WINDOWS_PATHS="true"
 
+# My functions
+cdl() {
+  cd $1; ls -a
+}
+complete -A directory cdl
+
 # My aliases
 alias cat="pygmentize -g"
+alias cd="cdl"
