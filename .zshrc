@@ -49,7 +49,7 @@ export NVM_DIR="$HOME/.nvm"
 # https://github.com/chrishunt/dot-files/blob/master/.zshrc
 if which tmux 2>&1 >/dev/null; then
   if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
-    tmux attach -t tmux || tmux new -s tmux; exit
+    tmux attach -t tmux &> /dev/null || tmux new -s tmux; exit
   fi
 fi
 
@@ -67,6 +67,11 @@ export DOCKER_HOST="tcp://192.168.99.100:2376"
 export DOCKER_CERT_PATH=$(wslpath "C:\Users\Ramzan\.docker\machine\machines\default")
 export DOCKER_MACHINE_NAME="default"
 export COMPOSE_CONVERT_WINDOWS_PATHS="true"
+
+# My startup
+if [ $TMUX_PANE = "%0" ] ; then
+  sudo service postgresql start &> /dev/null
+fi
 
 # My functions
 cdl() {
