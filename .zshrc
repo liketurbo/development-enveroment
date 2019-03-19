@@ -75,6 +75,7 @@ export COMPOSE_CONVERT_WINDOWS_PATHS="true"
 # My startup
 if [ $TMUX_PANE = "%0" ] ; then
   sudo service postgresql start &> /dev/null
+  sudo service redis-server restart &> /dev/null
 fi
 
 # My functions
