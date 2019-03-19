@@ -39,6 +39,10 @@ fi
 # Use vim key bindings
 set -o vi
 
+# Bugfix: backspace doesn't working in insert mode
+# https://github.com/denysdovhan/spaceship-prompt/issues/91
+bindkey "^?" backward-delete-char
+
 # Node Version Manager - Simple bash script to manage multiple active node.js version
 # https://github.com/creationix/nvm
 export NVM_DIR="$HOME/.nvm"
