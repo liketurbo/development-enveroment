@@ -26,11 +26,7 @@ source $ZSH/oh-my-zsh.sh
 export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='vim'
 
 #########################
 # User defined settings #
@@ -42,6 +38,10 @@ set -o vi
 # Bugfix: backspace doesn't working in insert mode
 # https://github.com/denysdovhan/spaceship-prompt/issues/91
 bindkey "^?" backward-delete-char
+
+# Bugfix: python: tkinter need a display
+# https://stackoverflow.com/questions/48254530/tkinter-in-ubuntu-inside-windows-10-error-no-display-name-and-no-display-env
+export DISPLAY=:0
 
 # Node Version Manager - Simple bash script to manage multiple active node.js version
 # https://github.com/creationix/nvm
@@ -78,12 +78,5 @@ if [ $TMUX_PANE = "%0" ] ; then
   sudo service redis-server restart &> /dev/null
 fi
 
-# My functions
-cdl() {
-  cd $1; ls -a
-}
-complete -A directory cdl
-
 # My aliases
 alias cat="pygmentize -g"
-alias cd="cdl"
