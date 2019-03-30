@@ -64,13 +64,9 @@ ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,underline
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
-# Docker variables for WSL
-# https://medium.freecodecamp.org/how-to-set-up-docker-and-windows-subsystem-for-linux-a-love-story-35c856968991 
-export port DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://192.168.99.100:2376"
-export DOCKER_CERT_PATH=$(wslpath "C:\Users\Ramzan\.docker\machine\machines\default")
-export DOCKER_MACHINE_NAME="default"
-export COMPOSE_CONVERT_WINDOWS_PATHS="true"
+# Docker variables for WSL (Win10Pro)
+# https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly
+export DOCKER_HOST="tcp://localhost:2375"
 
 # My startup
 if [ $TMUX_PANE = "%0" ] ; then
